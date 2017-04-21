@@ -1,0 +1,32 @@
+# Memoirs-of-a-Threat-Hunter
+My personal experience in Threat Hunting and knowledge gained so far.
+
+The buzz word first came in 2014. I have worked as Incident Responder and as SOC Analysts and when I started reading about Threat Hunting I realised this is something I am already doing. However, I had limitations. When you are an Incident Responder you are investigating a specific scenario or incident after it has been detected/identified. Similar goes to SOC analysts, however they are remote. What I call this was more reactive approach. 
+
+I always faced issues in understanding complete picture especially as a SOC analyst. You heavily rely on logs and how good your SIEM rules are. There are many instances where correct logs are not even being logged to detect a threat. Yes there are SOC who performs threat hunting for their organisation or customer, however, in my experience I have seen all concentrating on identifying known indicators of compromise and normally follow these steps:
+
+    1. Collect Indicators of Compromise – Basic/Advanced Threat intelligence platform – Yes I have collected Indicators of               compromise from all over world than what ?
+    2. Compare the IOCs with internal logs – SIEM – to understand the extent of infection – lateral movements as we say. One can also use specific tools for this – carbon black, palantir, dark trace etc.
+    3. Detect and mitigation – most of the time by running anti-virus and/or restoring the system from backup or re-installing a fresh copy or tuning security controls.
+
+Threat hunting gave meaning to another approach - pro-active approach – where team of experience Incident Responders/ Analysts/Hunt Team will dive into logs and organisation network to identify anomalies and/or unwanted entities within a network. The days of external organisations notifying you of an infection or data exfil or their own data showing up on pastebin are increasing and organisation must have Threat Hunting capabilities well invested and implemented. Proper Process and procedure are important as well in understanding how to perform these duties. 
+
+Threat hunting goes beyond just deploying a product within the network and responding based on what it alerts. It goes beyond normal rule and/or signature based mechanisms to detect threats that one cannot detect with just plug-n-play devices. Both requires human factor to perform these actions. Deep diving into the networks and looking for adversaries (active defense and/or pro-active investigations) is a must have within the organisation.
+
+Threat Hunting phases as per Sqrrl:
+
+    1. Create and/or define Hypotheses
+    2. Investigate via tools and techniques
+    3. Identify new patterns and TTP (Tools, techniques and procedure)
+    4. Inform and update analytics platform and/or database
+    5. Start 1
+
+In this repo, I will be touching following points :
+
+    1. Process and procedure for Threat Hunting.
+    2. Approaches for Threat Hunting
+    3. Ways to detect threats lurking on your network.
+    
+One can commend or request for something that they are specially looking for.
+
+Happy Hunting !!!!
