@@ -1,0 +1,20 @@
+Following are few tips for start. All of these and other will be expanded in detail regularly.
+    
+    1. Central logging place such as SIEM logs from various network devices.
+    2. Traffic violating security standards.
+    3. Traffic going to or coming from countries where customer does not do business with.
+    4. Access/running executables or confidential files on hosts/servers – this can be done by acceptable use monitoring.
+    5. Threat intelligence and/or threat feeds – open source and subscribed and matching against the logs.
+    6. Endpoint protection logs – especially the ones that are cleaned or quarantined. We need to understand how endpoint and/or AV vendors are identifying or logging these entries to get a broader picture and what type of tools or malware are being used against you.
+    7. Publicly available information for the customer and analysing how that information can be used to target customers and monitoring those open doors.
+    8. Windows logs – privilege escalation, failed attempts, user accounts on the system, which user logged into the system, what services/process running, one can also make list of folders that should not have any executables or services starting from.
+    9. Proxy and/or DNS logs – suspicious packets, HTTP request, large/similar number of bytes in and bytes out, any traffic going via clear-text protocols such as 22. Look for specific keywords in DNS logs, also check what DNS servers requests are going – may find some foreign DNS.
+
+To identify IOCs and/or malicious entities independent of any customer logs:
+
+    1. Randomly accessing websites on top-level domains to identify any suspicious/malicious re-direction – the traffic is passed to the interface being monitored by snort. Windows machine will also have procmon with Virus Total integration and ofcourse wireshark.
+    2. Analysing spam emails and run it over Security Onion to see if any alerts gets trigger. Extract domains and IP address and use them in the SIEM.
+    3. Check specific parameters in the URL/HTTP requests that can be used to exploit web applications – although the IDPS may trigger the rule for it but there are instances where we do not get IDPS logs.
+    4. Lastly, honeypot to identify bad actors - this depends on organisation policies.
+    5. Lurking on private forums, IRC and dark web – hell yeah.
+    6. Following threat campaigns.
